@@ -51,6 +51,7 @@
 	<plugin name="cordova-admob" />
 	<plugin name="cordova-plugin-inappbrowser" />
 	<plugin name="cordova-plugin-network-information" />
+	<plugin name="cordova-plugin-geolocation" />
 	<!--	<plugin name="com-sarriaroman-photoviewer" />
 		
 		-->
