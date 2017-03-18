@@ -61,6 +61,7 @@
 	<plugin name="cordova-plugin-inappbrowser" />
 	<plugin name="cordova-plugin-network-information" />
 	<plugin name="cordova-plugin-geolocation" />
+	<plugin name="cordova-plugin-x-socialsharing" />
 	<!--	<plugin name="com-sarriaroman-photoviewer" />
 		
 		-->
