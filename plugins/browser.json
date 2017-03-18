@@ -69,6 +69,12 @@
         },
         "com-sarriaroman-photoviewer": {
             "PACKAGE_NAME": "com.skyexplorer.hiking"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.skyexplorer.shenzhenmtr"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.skyexplorer.hiking"
         }
     },
     "dependent_plugins": {
@@ -76,6 +82,9 @@
             "PACKAGE_NAME": "com.skyexplorer.hiking"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.skyexplorer.hiking"
+        },
+        "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "com.skyexplorer.hiking"
         }
     }

@@ -90,6 +90,15 @@
         },
         "com-sarriaroman-photoviewer": {
             "PACKAGE_NAME": "com.skyexplorer.mtr"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.skyexplorer.shenzhenmtr"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.skyexplorer.hiking"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.skyexplorer.hiking"
         }
     },
     "dependent_plugins": {},
@@ -713,6 +722,31 @@
             "clobbers": [
                 "PhotoViewer"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
+        },
+        {
+            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+            "id": "cordova-connectivity-monitor.connectivity",
+            "pluginId": "cordova-connectivity-monitor",
+            "clobbers": [
+                "window.connectivity"
+            ]
+        },
+        {
+            "file": "plugins/cordova-admob/www/admob.js",
+            "id": "cordova-admob.AdMobAds",
+            "pluginId": "cordova-admob",
+            "clobbers": [
+                "window.admob",
+                "window.tappx"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -738,6 +772,9 @@
         "cordova-plugin-vibration": "2.1.3",
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-plugin-document-viewer": "0.8.0",
-        "com-sarriaroman-photoviewer": "1.1.10"
+        "com-sarriaroman-photoviewer": "1.1.10",
+        "cordova-plugin-x-socialsharing": "5.1.6",
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-admob": "4.1.16"
     }
 }

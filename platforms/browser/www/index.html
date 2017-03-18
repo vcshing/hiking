@@ -19,9 +19,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	
     <!-- Your app title -->
-    <title>Vibration massage</title>
+    <title>Bicycle Route</title>
 
     <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
@@ -52,7 +53,10 @@
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
         <div class="content-block otherApp">
-            <p>Other Apps</p>
+            <p>Other App</p>
+        </div>
+		<div class="content-block shareApp">
+            <p>Share App</p>
         </div>
     </div>
 
@@ -64,7 +68,7 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">MTR</div>
+                    <div class="center sliding">Hiking Route</div>
                     <div class="right">
                         <!--
                           Right link contains only icon - additional "icon-only" class
@@ -80,33 +84,11 @@
                 <div data-page="index" class="page">
                     <!-- Scrollable page content -->
                     <div class="page-content">
-                        <div class="content-block">
+                
 							<div class="pinch-zoom">
-							<!--<iframe src="image/map.png" style="width:100%"></iframe>-->
+
 							</div>
 			
-							<br/>
-						<!--	<div class="onoffswitch">
-								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
-								<label class="onoffswitch-label" for="myonoffswitch">
-									<span class="onoffswitch-inner"></span>
-									<span class="onoffswitch-switch"></span>
-								</label>
-							</div>
-							<br/>
-
-							<div class="onoffswitch2">
-								
-								<input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox2" id="myonoffswitch2">
-								<label class="onoffswitch-label2" for="myonoffswitch2">
-									<span class="onoffswitch-inner2"></span>
-									<span class="onoffswitch-switch2"></span>
-								</label>
-							</div>
-							-->
-                            <!-- Link to another page -->
-                           <!-- <a href="about.html">About app</a>-->
-                        </div>
                     </div>
                 </div>
             </div>
@@ -135,47 +117,26 @@
 
 
 
-
 	$(function(){
           //  $('div.pinch-zoom').each(function () {
           //      new RTP.PinchZoom($(this), {});
           //  });
+		var height = $(window).height();
+		if (height < 400) {
+			height = (height *2)-100;
+		}
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
+		
 		function onOnline() {
-			$(".pinch-zoom").html("<iframe src=\"http://www.szmc.net/page/html5.html\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
+			$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"http://hkhikingmap.misterngan.com/\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 		}
 		
 		function onOffline() {
-			$(".pinch-zoom").html("<iframe src=\"image/map.png\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
+			//$(".pinch-zoom").html("<iframe src=\"image/map.png\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
 		} 
 		  
-		$(".onoffswitch-label").bind("click",function(){
-			if($(".onoffswitch-checkbox").is(':checked')=== true){
-				navigator.vibrate([]);
-				window.clearInterval(IntervalVibrate);
-				navigator.vibrate([]);
-				IntervalVibrate="";
-				if(Math.floor(Math.random() * 2) + 1 == 1 ){
-					window.admob.requestInterstitialAd();
-				}
-			}else{
-				navigator.vibrate([1000, 1000, 3000, 1000, 5000]); 
-				if(IntervalVibrate==""){
-					IntervalVibrate = window.setInterval(function(){ 	
-						navigator.vibrate([1000, 1000, 3000, 1000, 5000]); 
-					},11000);	
-				}
-			}
-		})
-		
-		$(".onoffswitch-label2").bind("click",function(){
-			if(Math.floor(Math.random() * 3) + 1 == 1 ){
-				window.admob.requestInterstitialAd();
-			}
-		})
-		
 		
 		$(".otherApp").bind("click",function(e){
 			e.preventDefault();
@@ -185,6 +146,11 @@
 			var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
 			window.open(url, target, options);
 			
+		})
+		
+		$(".shareApp").bind("click",function(e){
+			SocialSharing.share("An Starstails", "It is Fun", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.hiking");
+  
 		})
 	})
 	
