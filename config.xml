@@ -49,18 +49,10 @@
 	  </platform>
 	  <platform name="windows">
 	   </platform>
-  <preference name="AutoHideSplashScreen" value="false"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="android-minSdkVersion" value="16"/>
-  <preference name="BackupWebStorage" value="none"/>
-  <preference name="SplashMaintainAspectRatio" value="true"/>
-  <preference name="FadeSplashScreenDuration" value="300"/>
-  <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="3000"/>
-  <preference name="fullscreen" value="true"/>
-   <preference name="loadUrlTimeoutValue" value="700000"/>
+    <preference name="DisallowOverscroll" value="true" />
+
+	<preference name="fullscreen" value="true" />
+    <preference name="loadUrlTimeoutValue" value="700000"/>
 	
 	
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
@@ -70,7 +62,7 @@
 	<plugin name="cordova-plugin-network-information" />
 	<plugin name="cordova-plugin-geolocation" />
 	<plugin name="cordova-plugin-x-socialsharing" />
-	
+	<plugin name="phonegap-plugin-barcodescanner" />
 	<!--	<plugin name="com-sarriaroman-photoviewer" />
 		
 		-->
