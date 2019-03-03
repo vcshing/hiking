@@ -31,7 +31,7 @@
 			  <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
 			</feature>
 			
-		<config-file platform="android"  parent="/manifest" mode="add">
+		<config-file platform="android" target="AndroidManifest.xml" parent="/*" mode="add">
 			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 			<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
