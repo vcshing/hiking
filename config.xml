@@ -63,5 +63,5 @@
 	<plugin name="cordova-plugin-statusbar" spec="1.0.1" />
 	<plugin name="cordova-plugin-x-socialsharing" spec="5.4.4" />
 	<plugin name="cordova-plugin-network-information" />
-     <plugin name="cordova-plugin-geolocation" />
+  
 </widget>
